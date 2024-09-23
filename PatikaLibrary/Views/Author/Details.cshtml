@@ -1,0 +1,11 @@
+﻿@model AuthorDetailsViewModel
+
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Model.FirstName</li>
+        <li class="list-group-item">@Model.LastName</li>
+        <li class="list-group-item">@(Model.DateOfBirth == DateTime.MinValue ? "Bilinmiyor" : Model.DateOfBirth) </li>
+    
+    </ul>
+</div>
+

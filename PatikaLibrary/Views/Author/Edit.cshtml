@@ -1,0 +1,29 @@
+﻿@model AuthorEditViewModel
+
+
+<h3> Düzenleme Sayfası</h3>
+
+<form asp-controller="Author" asp-action="Edit">
+    <div>
+        <label> Yazara İsimi</label>
+        <input asp-for="FirstName" class="form-control" type="text" />
+        <span asp-validation-for="FirstName" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <div>
+
+        <label>Yazararın Soyisimi</label>
+        <textarea asp-for="LastName" rows="2" class="form-control"> </textarea>
+        <span asp-validation-for="LastName" class="text-danger mt-2 fw-bold"></span>
+    </div>
+
+    <div>
+        <label>Doğum Tarihi</label>
+        <input asp-for="DateOrBirth" class="form-control" type="text" />
+        <span asp-validation-for="DateOrBirth" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <button type="submit" class="btn btn-info mt-2"> Save </button>
+
+
+</form>

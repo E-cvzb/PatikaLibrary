@@ -1,0 +1,14 @@
+﻿@model BookDetailsViewModel
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        @Model.Title
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Genre:@Model.Genre</li>
+        <li class="list-group-item">Publish Time:@(Model.PublishTime == DateTime.MinValue ? "Bilinmiyor" : Model.PublishTime) </li>
+        <li class="list-group-item">Stock:@Model.CopiesAvailable</li>
+      
+    </ul>
+</div>
+

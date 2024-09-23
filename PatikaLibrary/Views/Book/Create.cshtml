@@ -1,0 +1,42 @@
+﻿
+@model BookCreateViewModel
+
+
+<h3> Yeni Görev  Ekleme Sayfası</h3>
+
+<form asp-controller="Book" asp-action="Create">
+    <div>
+        <label> Book Title</label>
+        <input asp-for="Title" class="form-control" type="text" />
+        <span asp-validation-for="Title" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <div>
+
+        <label>Genre</label>
+        <textarea asp-for="Genre" rows="2" class="form-control"> </textarea>
+        <span asp-validation-for="Genre" class="text-danger mt-2 fw-bold"></span>
+    </div>
+
+    <div>
+        <label> Publish Time</label>
+        <input asp-for="PublishTime" class="form-control" type="text" />
+        <span asp-validation-for="PublishTime" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <div>
+        <label> Author</label>
+        <input asp-for="Author" class="form-control" type="text" />
+        <span asp-validation-for="Author" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <div>
+        <label> Stock</label>
+        <input asp-for="CopiesAvailable" class="form-control" type="text" />
+        <span asp-validation-for="CopiesAvailable" class="text-danger  mt-3 fw-bold"> </span>
+    </div>
+
+    <button type="submit" class="btn btn-info mt-2"> Save </button>
+
+
+</form>
